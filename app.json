@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,7 +11,8 @@
     "navigationBarTextStyle": "white"
   },
   "usingComponents": {
-    "cu-custom": "/colorui/components/cu-custom"
+    "cu-custom": "/colorui/components/cu-custom",
+    "cu-toolbar": "/colorui/components/toolbar/index"
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,11 @@
+<view class='cu-bar-ex' >
+  <view class="cu-bar tabbar bg-white">
+    <view wx:for="{{list}}" catchtap='onItem' data-index="{{index}}" data-url="{{item.url}}"  class="action {{item.isAdd?'add-action':''}} {{index==current?'text-green':'text-gray'}}" wx:key="{{index}}">
+      <view wx:if="{{!item.isAdd}}" class="cuIcon-{{item.icon}}">
+        <view class="cu-tag badge" wx:if="{{item.isBadge}}">{{item.badge}}</view>
+      </view>
+      <button wx:if="{{item.isAdd}}" class="cu-btn cuIcon-add bg-green shadow"></button>
+      {{item.title}}
+    </view>
+  </view>
+</view>

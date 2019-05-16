@@ -42,7 +42,67 @@ App({
       }
     })
   },
+  getToolbar() {
+
+    let me = this;
+    return {
+      setData(list) {
+        me.globalData.toolbar.list = list;
+        this.countdown = this.selectComponent('#toolbar');
+        this.countdown.resetData();
+      }
+    }
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    toolbar: {
+      current: 0,
+      list: [{
+        title: "首页",
+        icon: "homefill",
+        badge: "",
+        isBadge: false,
+        extendClass: "",
+        isAdd: false,
+        url: "/pages/index/index"
+
+      }, {
+        title: "分类",
+        icon: "similar",
+        badge: "",
+        extendClass: "",
+        isBadge: false,
+        isAdd: false,
+          url: "/pages/test/index"
+
+      }, {
+        title: "发布",
+        icon: "add",
+        badge: "",
+        extendClass: "shadow button-hover",
+        isBadge: false,
+        isAdd: true,
+        url: ""
+
+      }, {
+        title: "购物车",
+        icon: "cart",
+        badge: "99",
+        extendClass: "",
+        isBadge: true,
+        isAdd: false,
+        url: ""
+
+      }, {
+        title: "我的",
+        icon: "my",
+        badge: "",
+        extendClass: "",
+        isBadge: true,
+        isAdd: false,
+        url: ""
+
+      }]
+    }
   }
 })

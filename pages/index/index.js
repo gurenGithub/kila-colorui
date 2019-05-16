@@ -52,5 +52,17 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onTest(){
+
+    app.getToolbar().setData.call(this,[]);
+  },
+  onShow(){
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
   }
 })

@@ -2,4 +2,3 @@
   <view slot="content">操作条</view>
 </cu-custom>
 <button bindtap='onTest'>eee</button>
-<cu-toolbar id="toolbar"></cu-toolbar>
